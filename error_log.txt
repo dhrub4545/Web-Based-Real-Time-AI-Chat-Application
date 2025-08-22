@@ -1,0 +1,10 @@
+[12-Dec-2024 22:51:32 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 't meant to procrastinate. Really.  But the lure of the new MMORPG, "Realm of ...' at line 1 in C:\xampp\htdocs\chatapp\chat_ai_receive.php:106
+Stack trace:
+#0 C:\xampp\htdocs\chatapp\chat_ai_receive.php(106): mysqli_query(Object(mysqli), 'INSERT INTO `ch...')
+#1 {main}
+  thrown in C:\xampp\htdocs\chatapp\chat_ai_receive.php on line 106
+[12-Dec-2024 23:26:00 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''hello\')' at line 1 in C:\xampp\htdocs\chatapp\chat_ai_send.php:130
+Stack trace:
+#0 C:\xampp\htdocs\chatapp\chat_ai_send.php(130): mysqli_query(Object(mysqli), 'INSERT INTO `ch...')
+#1 {main}
+  thrown in C:\xampp\htdocs\chatapp\chat_ai_send.php on line 130
