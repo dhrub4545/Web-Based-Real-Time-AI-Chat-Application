@@ -1,7 +1,7 @@
 # import os
 # import google.generativeai as genai
 
-# genai.configure(api_key="AIzaSyBzMu_76nUAcycO4BlPJekIZjnGRLXGUl4")
+# genai.configure(api_key="YOUR_API_KEY")
 
 # # Create the model
 # generation_config = {
@@ -71,3 +71,4 @@ def chat():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
