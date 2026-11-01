@@ -39,7 +39,12 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 # Configure API key
-genai.configure(api_key="AIzaSyDphRJTctpvY7UdW6MxtBpo8gkTcwS_K1E")
+import os
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+if GEMINI_API_KEY:
+    genai.configure(api_key=GEMINI_API_KEY)
+else:
+    print("[WARNING] GEMINI_API_KEY environment variable is not set.")
 
 generation_config = {
     "temperature": 1,
