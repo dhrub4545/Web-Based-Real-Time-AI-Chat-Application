@@ -91,9 +91,9 @@ flowchart TD
     FlaskServer --> CORSModule
     CORSModule --> GeminiClient
     GeminiClient -->|"generateContent()"| GeminiAPI
-    GeminiAPI -->>GeminiClient: Generated AI Text
-    GeminiClient -->>FlaskServer: JSON Response Payload
-    FlaskServer -->>UI: Render AI Bubble in Chat
+    GeminiAPI -->|"Generated AI Text"| GeminiClient
+    GeminiClient -->|"JSON Response Payload"| FlaskServer
+    FlaskServer -->|"Render AI Bubble in Chat"| UI
 ```
 
 ---
