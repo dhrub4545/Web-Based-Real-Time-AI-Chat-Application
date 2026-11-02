@@ -13,7 +13,7 @@
 # }
 
 # model = genai.GenerativeModel(
-#   model_name="gemini-1.5-pro-002",
+#   model_name=os.environ.get("GEMINI_MODEL", "gemini-2.5-flash"),
 #   generation_config=generation_config,
 # )
 
@@ -55,7 +55,7 @@ generation_config = {
 }
 
 model = genai.GenerativeModel(
-    model_name="gemini-1.5-pro-002",
+    model_name=os.environ.get("GEMINI_MODEL", "gemini-2.5-flash"),
     generation_config=generation_config,
 )
 
