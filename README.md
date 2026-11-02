@@ -5,7 +5,7 @@
 [![Python Version](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Microservice-Flask%203.0-000000?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![MySQL](https://img.shields.io/badge/Database-MySQL%20%7C%20MariaDB-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
-[![Google Gemini AI](https://img.shields.io/badge/AI%20Copilot-Gemini%204%20Argon-8E75C2?logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
+[![Google Gemini AI](https://img.shields.io/badge/AI%20Copilot-Gemini%203.8%20Flash-8E75C2?logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
 [![Frontend](https://img.shields.io/badge/Frontend-Vanilla%20JS%20%26%20CSS3-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ---
@@ -28,14 +28,14 @@ Traditional web chat applications built on classic LAMP stacks (Linux, Apache, M
 
 **Web-Based Real-Time AI Chat Application** solves this challenge through a **high-efficiency hybrid architecture**:
 - A robust **PHP + MySQL** engine handles user registration, session authentication, relational buddy discovery, and dual-table conversation persistence.
-- An asynchronous **Python Flask microservice** powered by **Google Gemini 4 Argon** serves as an intelligent real-time conversational co-pilot inside chat sessions, synthesizing responses and providing instant automated assistance on demand.
+- An asynchronous **Python Flask microservice** powered by **Google Gemini 3.8 Flash** serves as an intelligent real-time conversational co-pilot inside chat sessions, synthesizing responses and providing instant automated assistance on demand.
 
 ---
 
 ## ✨ Key Features
 
 - 💬 **Real-Time Human-to-Human Messaging**: Fast, responsive bidirectional messaging between authenticated users with dynamic polling and instant UI updates.
-- 🤖 **Embedded Gemini 4 Argon AI Copilot**: Seamlessly query an intelligent AI assistant within the chat interface, receiving rich, contextual responses powered by Google's state-of-the-art LLM.
+- 🤖 **Embedded Gemini 3.8 Flash AI Copilot**: Seamlessly query an intelligent AI assistant within the chat interface, receiving rich, contextual responses powered by Google's state-of-the-art LLM.
 - 🔐 **PHP Session Authentication**: Complete user lifecycle management including registration (`signup.php`), login (`index.php`), credential validation, and secure session teardown (`logout.php`).
 - 🗄️ **Per-User Dynamic Table Partitioning**: Automatic schema creation upon user signup, maintaining dedicated message tables for high query isolation and rapid historical retrieval.
 - 🔍 **Live Directory Search**: Asynchronous prefix search (`tableinfo.php`) to find contacts, preview usernames, and initiate new direct message threads.
@@ -72,7 +72,7 @@ flowchart TD
     end
 
     subgraph CloudAI["DeepMind AI Cloud"]
-        GeminiAPI["Google Gemini 4 Argon (gemini-4-argon)"]
+        GeminiAPI["Google Gemini 3.8 Flash (gemini-3.8-flash)"]
     end
 
     UI --> AuthModule
@@ -107,7 +107,7 @@ sequenceDiagram
     participant PHP as PHP Server (Apache)
     participant MySQL as MySQL Database (chatuser)
     participant Flask as Flask Microservice (Port 5000)
-    participant Gemini as Google Gemini 4 Argon
+    participant Gemini as Google Gemini 3.8 Flash
 
     Note over User,MySQL: Channel A: Peer-to-Peer Human Chat
     User->>PHP: POST /sendmessage.php (k1: UserA, k2: UserB, message: "Hello!")
@@ -144,7 +144,7 @@ sequenceDiagram
 | **AI Microservice** | Python Flask | `^3.0.0` | Lightweight microservice gateway for AI inference |
 | **Cross-Origin Filter**| `flask-cors` | `^4.0.0` | Secure CORS headers enabling browser-to-Flask communication |
 | **Generative AI** | `google-generativeai` | `^0.8.0` | Official Google SDK for Gemini LLMs |
-| **AI Foundation Model**| `gemini-4-argon` | Latest | Long-context multimodal reasoning model |
+| **AI Foundation Model**| `gemini-3.8-flash` | Latest | Long-context multimodal reasoning model |
 | **Client Frontend** | HTML5 / CSS3 / Vanilla JS | ES6+ | Lightweight zero-dependency reactive client interface |
 
 ---
@@ -154,7 +154,7 @@ sequenceDiagram
 ```text
 Web-Based-Real-Time-AI-Chat-Application/
 ├── addnewuser.php                    # Database registration script creating partitioned user tables
-├── app.py                            # Flask microservice connecting to Gemini 4 Argon
+├── app.py                            # Flask microservice connecting to Gemini 3.8 Flash
 ├── chatapp.php                       # Main interactive dual-column chat room UI
 ├── chatappjs.js                      # Client AJAX message sender, polling loop & DOM manager
 ├── chat_ai_receive.php               # PHP bridge endpoint for incoming AI messages
@@ -257,7 +257,7 @@ http://localhost/Web-Based-Real-Time-AI-Chat-Application/index.php
 1. Click **Sign Up** to create a test account (e.g., `alice`).
 2. Open an incognito browser window and sign up a second account (e.g., `bob`).
 3. Search for the opposite username in the directory, click their name, and exchange real-time messages.
-4. Interact with the AI copilot to receive instant automated Gemini 4 Argon responses directly inside the chat feed!
+4. Interact with the AI copilot to receive instant automated Gemini 3.8 Flash responses directly inside the chat feed!
 
 ---
 
@@ -279,7 +279,7 @@ http://localhost/Web-Based-Real-Time-AI-Chat-Application/index.php
 
 | Endpoint | Method | Request Payload | Response Payload | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| `/chat` | `POST` | `{"message": "string"}` | `{"response": "string"}` | Generate conversational AI response via Gemini 4 Argon |
+| `/chat` | `POST` | `{"message": "string"}` | `{"response": "string"}` | Generate conversational AI response via Gemini 3.8 Flash |
 
 ---
 
